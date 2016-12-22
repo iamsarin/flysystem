@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.26 - 2016-12-22
+
+### Added
+
+* [Filesystem] Added an option to disable asserts.
+
 ## 1.0.0 - UNRELEASED
 
 ### Removed
