@@ -533,7 +533,7 @@ class Filesystem implements FilesystemInterface
      */
     public function assertPresent($path)
     {
-        if (! $this->has($path)) {
+        if ($this->config->get('disable_asserts', false) === false && ! $this->has($path)) {
             throw new FileNotFoundException($path);
         }
     }
@@ -547,7 +547,7 @@ class Filesystem implements FilesystemInterface
      */
     public function assertAbsent($path)
     {
-        if ($this->has($path)) {
+        if ($this->config->get('disable_asserts', false) === false && $this->has($path)) {
             throw new FileExistsException($path);
         }
     }
